@@ -75,3 +75,33 @@ document.querySelectorAll('.skill-category, .contact-item').forEach(element => {
     element.style.transition = 'all 0.6s ease-out';
     observer.observe(element);
 });
+
+// Form Submission
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form values
+        const name = contactForm.querySelector('input[type="text"]').value;
+        const email = contactForm.querySelector('input[type="email"]').value;
+        const message = contactForm.querySelector('textarea').value;
+
+        // Simple validation
+        if (name && email && message) {
+            // Create mailto link
+            const subject = encodeURIComponent('New Message from Portfolio');
+            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            window.location.href = `mailto:your@email.com?subject=${subject}&body=${body}`;
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Show success message
+            alert('Thank you for your message! Please complete the email sending process.');
+        } else {
+            alert('Please fill in all fields');
+        }
+    });
+}
+
