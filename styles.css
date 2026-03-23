@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #64b5f6;
+    --secondary-color: #1e88e5;
+    --dark-bg: #0d1b2a;
+    --darker-bg: #070f1a;
+    --card-bg: #162032;
+    --text-color: #e0e8f0;
+    --text-secondary: #94a7bf;
+    --accent-blue: #42a5f5;
+    --accent-cyan: #81d4fa;
+    --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
