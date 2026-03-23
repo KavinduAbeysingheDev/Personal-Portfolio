@@ -38,6 +38,7 @@ personal-portfolio/
  ┗ README.md         # Project documentation
 
  Author
+ 
 Kavindu Abeysinghe
 
 • Full Stack Developer 
